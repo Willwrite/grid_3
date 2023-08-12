@@ -1,0 +1,50 @@
+Body * {
+    box-sizing: border-box;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 2 fr 3 fr 2 fr;
+    /* 7 portions of space - 2+3+2 */
+        /* 1st column gets 2/7 of the space */
+    /* 2nd column gets 3/7 of the space */
+    /* 3rd column gets 2/7 of the space */
+    border: 1px dotted black;
+    grid-template-rows: 50x 30px 1 fr 1fr 1fr;
+    background-color: bisque;
+    gap: 8px;
+}
+
+/* first child of grid, give a border */
+
+#grid-container>*{
+    border: 3px solid black;
+}
+
+#grid-container h1 {
+    grid-column: span 3;
+    margin: 0px;
+    text-align: center;
+}
+
+#grid-container img {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#grid-container ol {
+    grid-column: span 2;
+}
+
+#home {
+   grid-column: 1/2;     
+}
+
+#facts-button {
+    grid-column: 3/4;
+}
+
+#moose-info{
+    grid-column: span 2;
+    /* 3/ 4or grid-column: span 2 */
+}
